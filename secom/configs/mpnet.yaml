@@ -1,0 +1,12 @@
+segmentor:
+  segment_model: gpt-4o-mini
+  prompt_path: instructions/segment_with_exchange_number.md
+  incremental_prompt_path: instructions/segment_incremental.md
+
+compressor:
+  compress_model: microsoft/llmlingua-2-xlm-roberta-large-meetingbank
+
+retriever:
+  storage: FAISS
+  embedding_model: sentence-transformers/multi-qa-mpnet-base-dot-v1
+  device_map: cuda

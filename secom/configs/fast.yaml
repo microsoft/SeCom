@@ -1,0 +1,7 @@
+segmentor:
+  segment_model: gpt-4o-mini
+  prompt_path: instructions/segment_with_exchange_number.md
+  incremental_prompt_path: instructions/segment_incremental.md
+
+retriever:
+  storage: BM25Retriever
