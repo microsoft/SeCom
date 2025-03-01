@@ -1,5 +1,5 @@
 <div align="center">
-<h2>🧠 SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents</h2>
+<h1>🧠 SeCom: On Memory Construction and Retrieval for <br>Personalized Conversational Agents</h1>
 <h4>
 <a href="https://www.arxiv.org/abs/2502.05589">📄 arXiv Paper</a> &nbsp; 
 <a href="https://llmlingua.com/secom.html">🌐 Project Page</a> &nbsp; 
@@ -10,11 +10,11 @@
 ## Key Takeaways
 💡 **Memory granularity matters**: Turn-level, session-level & summarization-based memory struggle with retrieval accuracy and the semantic integrity or relevance of the context.
 
-💡 **Prompt compression methods** (e.g., [LLMLingua-2](https://llmlingua.com/llmlingua2.html)) **can denoise memory retrieval, boosting both retrieval accuracy and response quality.**
+💡 **Prompt compression methods** (e.g., [LLMLingua-2](https://llmlingua.com/llmlingua2.html)) **can denoise memory retrieval**, boosting both **retrieval accuracy** and **response quality.**
 
 ✅ **SeCom** – an approach that **segments conversations topically** for memory construction and performs memory retrieval based on compressed memory units.
 
-📊 **Result?** Superior performance on long-term conversation benchmarks such as LOCOMO and Long-MT-Bench+!
+📊 **Result** – superior performance on long-term conversation benchmarks such as LOCOMO and Long-MT-Bench+!
 
 ## Install
 
