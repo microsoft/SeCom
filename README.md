@@ -1,7 +1,7 @@
 <div align="center">
 <h1>🧠 SeCom: On Memory Construction and Retrieval for <br>Personalized Conversational Agents</h1>
 <h4>
-<a href="https://www.arxiv.org/abs/2502.05589">📄 arXiv Paper</a> &nbsp; 
+<a href="https://www.arxiv.org/abs/2502.05589">📄 Paper (ICLR 2025)</a> &nbsp; 
 <a href="https://llmlingua.com/secom.html">🌐 Project Page</a> &nbsp; 
 </h4>
 
