@@ -1,14 +1,65 @@
-# Project
+<div align="center">
+<h2>🧠 SeCom: On Memory Construction and Retrieval for Personalized Conversational Agents</h2>
+<h4>
+<a href="https://www.arxiv.org/abs/2502.05589">📄 arXiv Paper</a> &nbsp; 
+<a href="https://llmlingua.com/secom.html">🌐 Project Page</a> &nbsp; 
+</h4>
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+</div>
 
-As the maintainer of this project, please make a few updates:
+## Key Takeaways
+💡 **Memory granularity matters**: Turn-level, session-level & summarization-based memory struggle with retrieval accuracy and the semantic integrity or relevance of the context.
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+💡 **Prompt compression methods** (e.g., [LLMLingua-2](https://llmlingua.com/llmlingua2.html)) **can denoise memory retrieval, boosting both retrieval accuracy and response quality.**
+
+✅ **SeCom** – an approach that **segments conversations topically** for memory construction and performs memory retrieval based on compressed memory units.
+
+📊 **Result?** Superior performance on long-term conversation benchmarks such as LOCOMO and Long-MT-Bench+!
+
+## Install
+
+```bash
+pip install llmlingua
+pip install -e .
+```
+
+SeCom uses [dot_env](https://github.com/theskumar/python-dotenv) to manage the API_KEY.
+
+```bash
+pip install python-dotenv
+```
+
+Specifiy your OPENAI_API_KEY and OPENAI_API_BASE in `~/dot_env/openai.env`
+
+```
+OPENAI_API_KEY=""
+OPENAI_API_BASE=""
+```
+
+## Usage
+
+```python
+
+from secom import SeCom
+
+memory_manager = SeCom(granularity="segment")
+
+conversation_history = [
+    [
+        "First session of a very looooooong conversation history",
+        "The second user-bot turn of the first session",
+    ],
+    ["Second Session ..."],
+]
+requests = ["A question regarding the conversation history", "Another question"]
+result = memory_manager.get_memory(
+    requests, conversation_history, compress_rate=0.9, retrieve_topk=1
+)
+print(result["retrieved_texts"])
+# >>>
+```
+
+For more examples, see "example/" and "experiment/".
 
 ## Contributing
 
